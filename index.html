@@ -1,81 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Header & Hero</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Animated Counter</title>
 </head>
 <body>
-  <section>
-  <button class="button-afspraak">
-    <p>MAAK EEN AFSPRAAK</p>
-  </button>
-  <button class="button-prijslijst">
-    <p>MAAK EEN AFSPRAAK</p>
-  </button>
-</section>
-</body>
-<style>
- section {
+
+    <h1>Unsere Erfolge</h1>
+
+    <span>© <script>document.write(new Date().getFullYear());</script> Cosmetique Totale</span>
+
+
+    <div class="counter-container">
+        <div class="counter-box">
+            🕒 <span class="counter" data-target="11">0</span> Jahre Erfahrung
+        </div>
+        <div class="counter-box">
+            😊 <span class="counter" data-target="3812">0</span> Kunden
+        </div>
+        <div class="counter-box">
+            💉 <span class="counter" data-target="26965">0</span> Behandlungen
+        </div>
+    </div>
+
+    <style>
+        .counter-container {
     display: flex;
-    gap: 1em;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-button {
-    --button-radius: 3px;
-    --button-text-clr: #fff;
-
-    width: 160px;
-    height: 48px;
-    border-radius: var(--button-radius);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    color: var(--button-text-clr);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+.counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    min-width: 160px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Standaard kleuren */
-.button-afspraak {
-    --button-clr-1: #1688A1; /* Blauw */
-    --button-clr-2: #73B233; /* Groen */
-    background-color: var(--button-clr-1);
+.counter-box:hover {
+    transform: scale(1.1);
 }
 
-.button-prijslijst {
-    --button-clr-1: #73B233; /* Groen */
-    --button-clr-2: #1688A1; /* Blauw */
-    background-color: var(--button-clr-1);
+.counter-box span {
+    font-size: 36px;
+    color: #ffcc00;
+    font-weight: bold;
 }
 
-/* Hover: omgekeerde kleur */
-.button-afspraak:hover,
-.button-afspraak:focus-visible,
-.button-afspraak:active {
-    background-color: var(--button-clr-2);
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
+.counter-box::before {
+    content: attr(data-label);
+    font-size: 18px;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 8px;
 }
 
-.button-prijslijst:hover,
-.button-prijslijst:focus-visible,
-.button-prijslijst:active {
-    background-color: var(--button-clr-2);
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
+/* Responsive */
+@media (max-width: 768px) {
+    .counter-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-/* Active state: iets ingedrukt effect */
-.button-afspraak:active,
-.button-prijslijst:active {
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-    transform: translateY(1px);
-}
+    </style>
 
-button:focus-visible {
-    outline: 2px solid red; /* Rode border */
-}
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll(".counter");
+
+            const observerOptions = {
+                root: null,
+                threshold: 1 
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        startCounter(counter);
+                        observer.unobserve(counter); 
+                    }
+                });
+            }, observerOptions);
+
+            counters.forEach(counter => observer.observe(counter));
+
+            function startCounter(counter) {
+                const target = +counter.getAttribute("data-target");
+                const duration = 3000;
+                const interval = 20; 
+                const step = (target / (duration / interval));
+
+                let current = 0;
+
+                function updateCounter() {
+                    current += step;
+                    if (current >= target) {
+                        counter.innerText = target.toLocaleString("de-DE");
+                    } else {
+                        counter.innerText = Math.floor(current).toLocaleString("de-DE");
+                        requestAnimationFrame(updateCounter);
+                    }
+                }
+
+                updateCounter();
+            }
+        });
+    </script>
 
 
-</style>
+
+
+</body>
 </html>
