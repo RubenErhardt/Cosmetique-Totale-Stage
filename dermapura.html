@@ -50,30 +50,32 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
         <div class="achievements">
             <div class="achievements-grid">
                 <!-- Grote kolom -->
+
                 <div class="achievement large">
-                  <h2 id="jahre-text">0</h2>
-                  <span>Jahre Erfahrung</span>
+                    <h2 id="behandlungen-text">0</h2>
+                    <span>Behandlungen durchgeführt</span>
                 </div>
+
+                 <!-- Afbeelding 1 -->
+                 <div class="grid-image">
+                    <img src="/achievements.png" alt="Achievement Image">
+                  </div>
               
                 <!-- Vier kleinere kolommen -->
                 <div class="achievement small">
                   <h2 id="kunden-text">0</h2>
-                  <span>Kunden</span>
+                  <span>kunden</span>
                 </div>
-              
+
                 <div class="achievement small">
-                  <h2 id="behandlungen-text">0</h2>
-                  <span>Behandlungen</span>
-                </div>
+                    <h2 id="jahre-text">0</h2>
+                    <span>jahre</span>
+                  </div>
               
-                <!-- Afbeelding 1 -->
-                <div class="grid-image">
-                  <img src="https://source.unsplash.com/400x300/?skin" alt="Achievement Image">
-                </div>
               
                 <!-- Afbeelding 2 -->
                 <div class="grid-image">
-                  <img src="https://source.unsplash.com/400x300/?cosmetic" alt="Achievement Image">
+                  <img src="/achievements.png" alt="Achievement Image">
                 </div>
               </div>
               
@@ -108,7 +110,7 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
 
 .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: 20px;
     max-width: 900px;
@@ -116,8 +118,10 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
     padding: 20px;
   }
 
+  
+
   .large {
-    grid-column: span 2;
+    grid-column: span 1;
     grid-row: span 2;
     background: #ECE8E4;
     text-align: center;
@@ -141,6 +145,14 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
     border-radius: 10px;
   }
 
+  .achievement {
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
   .achievement h2 {
     font-size: 32px;
     margin: 0;
@@ -291,11 +303,11 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
 
     .text{
         max-width: 40%;
-        margin-top: 4em;
+        margin-top: 10em;
     }
 
     .achievements{
-        margin-top: 4em;
+        margin-top: 10em;
     }
 
 </style>
@@ -337,41 +349,46 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
     });
   </script>
  
-<!-- GSAP voor Animatie en Count-Up -->
+<!-- GSAP en ScrollTrigger laden -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
   gsap.registerPlugin(ScrollTrigger);
 
-  function countUp(target, endValue, label, duration = 2) {
+  function countUp(target, endValue, duration = 3) {
     let obj = { value: 0 };
     gsap.to(obj, {
       value: endValue,
       duration: duration,
-      ease: "power3.out",
+      ease: "power2.out",
       onUpdate: function () {
-        document.getElementById(target).textContent = Math.floor(obj.value) + " " + label;
+        document.getElementById(target).textContent = Math.floor(obj.value);
       }
     });
   }
 
-  // ScrollTrigger voor animatie + tellen
-  gsap.from(".hexagon", {
+  // Zorg dat elk .achievement in beeld komt met fade-in + omhoog beweging
+  gsap.from(".achievement", {
     opacity: 0,
-    y: -20,
-    duration: 1,
-    stagger: 0.3,
+    y: 50,
+    duration: 1.5,
+    ease: "power3.out",
+    stagger: 0.3, // Elk element komt na elkaar
     scrollTrigger: {
-      trigger: ".hexagon",
-      start: "top 80%", // Start animatie als hexagons 80% in viewport zijn
-      once: true, // Alleen de eerste keer afspelen
+      trigger: ".achievements-grid",
+      start: "top 80%",
+      toggleActions: "play none none none",
+      once: true,
       onEnter: () => {
-        countUp("jahre-text", 11, "Jahre");
-        countUp("kunden-text", 3824, "Kunden");
-        countUp("behandlungen-text", 26995, "Behandlungen");
+        countUp("behandlungen-text", 26995 );
+        countUp("kunden-text", 3824);
+        countUp("jahre-text", 11);
       }
     }
   });
+
 </script>
+
+
   
 </html>
