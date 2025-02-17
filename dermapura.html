@@ -28,7 +28,7 @@
     </nav>
     </header>
 
-    <section class="Hero">
+    <section class="hero">
         <h1>
             Dauerhafte Haarentfernung, <br> <span>schnell & sanft</span>
         </h1>
@@ -37,7 +37,48 @@
         </h2>
 
         <img src="dermapura-home-hero-header.webp" alt="">
-    </section>   
+    </section>
+    
+    <section class="haut">
+        <div class="text">
+        <h2>Perfekte Haut für Ihr <span>Wohlbefinden</span></h2>
+            <p>Jede Haut und jedes Haar sind einzigartig – wir bieten maßgeschneiderte Lösungen für die besten Ergebnisse!
+Erfüllen Sie sich den Traum von seidig glatter Haut mit DERMAPURA, Ihrem Experten für dauerhafte Haarentfernung mit Laser und IPL sowie Kryolipolyse. An unseren Standorten in Leipzig Mitte, Leipzig Ost, Halle und Erfurt begleiten wir Sie auf dem Weg zu einem neuen Hautgefühl.
+Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL sorgen wir für optimale und langfristige Ergebnisse. Mit Erfahrung, individueller Beratung und kontinuierlicher Weiterbildung garantieren wir höchste Qualität – für Ihre Schönheit und Ihr Selbstbewusstsein.
+            </p>
+        </div>
+        <div class="achievements">
+            <div class="achievements-grid">
+                <!-- Grote kolom -->
+                <div class="achievement large">
+                  <h2 id="jahre-text">0</h2>
+                  <span>Jahre Erfahrung</span>
+                </div>
+              
+                <!-- Vier kleinere kolommen -->
+                <div class="achievement small">
+                  <h2 id="kunden-text">0</h2>
+                  <span>Kunden</span>
+                </div>
+              
+                <div class="achievement small">
+                  <h2 id="behandlungen-text">0</h2>
+                  <span>Behandlungen</span>
+                </div>
+              
+                <!-- Afbeelding 1 -->
+                <div class="grid-image">
+                  <img src="https://source.unsplash.com/400x300/?skin" alt="Achievement Image">
+                </div>
+              
+                <!-- Afbeelding 2 -->
+                <div class="grid-image">
+                  <img src="https://source.unsplash.com/400x300/?cosmetic" alt="Achievement Image">
+                </div>
+              </div>
+              
+        </div>
+    </section>
 
     
 </body>
@@ -64,6 +105,65 @@
     padding: 15px 20px;
     z-index: 1000; 
 }
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .large {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: #ECE8E4;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .small {
+    background: #ECE8E4;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .grid-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .achievement h2 {
+    font-size: 32px;
+    margin: 0;
+    color: black;
+  }
+
+  .achievement span {
+    font-size: 18px;
+    color: #666;
+  }
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .achievements-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+    }
+
+    .large {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+  }
 
 
     nav ul{
@@ -123,7 +223,7 @@
         max-width: 100%;
     }
 
-    .Hero img{
+    .hero img{
         width: 50%;
         height: auto;
         border-top-left-radius: 300px;
@@ -131,17 +231,23 @@
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 300px;
     }
+    
+    h2 span{
+        border-bottom: 2px solid #BF9658;
+    }
 
-    .Hero {
+    .hero {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Horizontaal centreren */
     align-items: center; /* Verticaal centreren */
     text-align: center; /* Zorgt ervoor dat de tekst gecentreerd blijft */
     width: 100%;
+    background: 
+    linear-gradient(to top, #ECE8E4 30%, transparent 20%);
     
 }
-    .Hero h1{
+    .hero h1{
         font-size: 3em;
         margin: 0 auto;
         margin-top: 1em;
@@ -150,28 +256,59 @@
         font-family: 'The Seasons', sans-serif;
     }
 
-    .Hero h1 span{
+    .hero h1 span{
         border-bottom: 2px solid #BF9658;
     }
 
-    .Hero h2{
+    .hero h2{
         font-family: DM Sans;
         color: #356274;
         font-weight: normal;
         font-size: 36px;
     }
 
+    .haut h2{
+        font-size: 2em;
+        color: #356274;
+        font-weight: normal;
+        font-family: 'The Seasons', sans-serif;
+    }
+
+    .haut p{
+        font-family: DM Sans;
+        color: #356274;
+        font-weight: normal;
+        font-size: 18px;
+    }
+
+    .haut{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+        background: 
+    linear-gradient(to bottom, #ECE8E4 20%, transparent 20%);
+    }
+
+    .text{
+        max-width: 40%;
+        margin-top: 4em;
+    }
+
+    .achievements{
+        margin-top: 4em;
+    }
+
 </style>
 
 <script>
-    gsap.from(".Hero h1", { 
+    gsap.from(".hero h1", { 
       opacity: 0, 
       y: -50, 
       duration: 1.2, 
       ease: "power3.out" 
     });
   
-    gsap.from(".Hero h2", { 
+    gsap.from(".hero h2", { 
       opacity: 0, 
       y: 30, 
       duration: 1.5, 
@@ -179,7 +316,7 @@
       ease: "power3.out" 
     });
   
-    gsap.from(".Hero img", { 
+    gsap.from(".hero img", { 
       opacity: 0, 
       scale: 0.90, 
       duration: 1.5, 
@@ -187,9 +324,9 @@
       ease: "power3.out" 
     });
   
-    gsap.from(".Hero", {
+    gsap.from(".hero", {
       scrollTrigger: {
-        trigger: ".Hero",
+        trigger: ".hero",
         start: "top 80%",
         toggleActions: "play none none reverse"
       },
@@ -199,5 +336,42 @@
       ease: "power3.out"
     });
   </script>
+ 
+<!-- GSAP voor Animatie en Count-Up -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  function countUp(target, endValue, label, duration = 2) {
+    let obj = { value: 0 };
+    gsap.to(obj, {
+      value: endValue,
+      duration: duration,
+      ease: "power3.out",
+      onUpdate: function () {
+        document.getElementById(target).textContent = Math.floor(obj.value) + " " + label;
+      }
+    });
+  }
+
+  // ScrollTrigger voor animatie + tellen
+  gsap.from(".hexagon", {
+    opacity: 0,
+    y: -20,
+    duration: 1,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".hexagon",
+      start: "top 80%", // Start animatie als hexagons 80% in viewport zijn
+      once: true, // Alleen de eerste keer afspelen
+      onEnter: () => {
+        countUp("jahre-text", 11, "Jahre");
+        countUp("kunden-text", 3824, "Kunden");
+        countUp("behandlungen-text", 26995, "Behandlungen");
+      }
+    }
+  });
+</script>
   
 </html>
