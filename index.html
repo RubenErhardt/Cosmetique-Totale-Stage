@@ -29,16 +29,44 @@
     </header>
 
     <main>
-    <section class="hero">
-        <h1>
-            Dauerhafte Haarentfernung, <br> <span>schnell & sanft</span>
-        </h1>
-        <h2>
-            Nie wieder rasieren, zupfen oder wachsen
-        </h2>
-
-        <img src="static/dermapura-home-hero-header.webp" alt="">
+      <section class="hero">
+            <div class="hero-content">
+                <h1>Dauerhafte Haarentfernung, <br> <span>schnell & sanft</span></h1>
+                <h2>Nie wieder rasieren, zupfen oder wachsen</h2>
+                <div class="hero-buttons">
+                    <button>test</button>
+                    <button>test</button>
+                </div>
+            </div>
+            <img src="static/dermapura-home-hero-header.webp" alt="Hero Image">
     </section>
+
+    <div class="logos">
+      <div class="logo_items">
+      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+      
+      </div>
+
+      <div class="logo_items">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+        
+        </div>
+      </div>
+    </div>
+    
+
+    
+    
     
     <section class="haut">
         <div class="text">
@@ -145,6 +173,7 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
 
     
 </body>
+</html>
 
 <style>
 
@@ -158,6 +187,149 @@ body{
         max-width: 200px;
     }
 
+    /* Hero-section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    background: linear-gradient(to right, #ECE8E4, #FFFFFF); 
+    min-height: 70vh; /* Zorgt voor een mooie hoogte */
+}
+
+/* Content blok (tekst) */
+.hero-content {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Titel en ondertitel */
+.hero h1 {
+    font-size: 3rem;
+    color: #356274;
+    font-family: 'The Seasons', sans-serif;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.hero h1 span {
+    border-bottom: 3px solid #BF9658;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    color: #356274;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* Knoppen styling */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.hero button {
+    background: #BF9658;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero button:hover {
+    background: #A07E4D;
+}
+
+/* Afbeelding */
+.hero img {
+    width: 40%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 20px;
+}
+
+/* Mobiel: tekst en afbeelding onder elkaar */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero img {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+
+@keyframes slides {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 30px 0px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before, .logos:after {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255));
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgb(255, 255, 255));
+}
+
+.logo_items {
+  display: inline-block;
+  animation: 30s slides infinite linear;
+}
+
+.logos:hover .logo_items {
+  animation-play-state: paused;
+}
+
+.logo_items img{
+  height: 100px;
+}
+
+
+
 @font-face {
     font-family: 'The Seasons';
     src: url('fonts/TheSeasons-Regular.otf') format('opentype'); 
@@ -170,7 +342,7 @@ header {
     top: 0;
 
     background-color: white;
-    padding: 15px 50px;
+    padding: 15px 100px;
     z-index: 1000; 
 }
 
@@ -231,49 +403,6 @@ nav ul{
         max-width: 100%;
     }
 
-    .hero img{
-        width: 50%;
-        height: auto;
-        border-top-left-radius: 300px;
-        border-top-right-radius: 50px;
-        border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 300px;
-    }
-    
-    h2 span{
-        border-bottom: 2px solid #BF9658;
-    }
-
-    .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Horizontaal centreren */
-    align-items: center; /* Verticaal centreren */
-    text-align: center; /* Zorgt ervoor dat de tekst gecentreerd blijft */
-    width: 100%;
-    background: 
-    linear-gradient(to top, #ECE8E4 30%, transparent 20%);
-    
-}
-    .hero h1{
-        font-size: 3em;
-        margin: 0 auto;
-        margin-top: 1em;
-        color: #356274;
-        font-weight: normal;
-        font-family: 'The Seasons', sans-serif;
-    }
-
-    .hero h1 span{
-        border-bottom: 2px solid #BF9658;
-    }
-
-    .hero h2{
-        font-family: DM Sans;
-        color: #356274;
-        font-weight: normal;
-        font-size: 36px;
-    }
 
     .haut h2{
       font-size: 2.25rem;
@@ -293,19 +422,14 @@ nav ul{
     .haut{
         display: flex;
         justify-content: space-between;
-        padding: 50px;
-        background: 
-    linear-gradient(to bottom, #ECE8E4 20%, transparent 20%);
+        padding: 100px;
     }
 
     .text{
         max-width: 40%;
-        margin-top: 10em;
+        margin-top: 2em;
     }
 
-    .achievements{
-        margin-top: 8em;
-    }
 
 
     .achievements-grid {
@@ -382,7 +506,7 @@ nav ul{
    display: flex;
    align-items: center;
    flex-direction: column;
-   padding: 50px;
+   padding: 100px;
   }
 
   .instituten-text {
@@ -572,11 +696,4 @@ nav ul{
         }
     });
 });
-
-
-
 </script>
-
-
-  
-</html>
