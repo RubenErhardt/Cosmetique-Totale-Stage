@@ -9,7 +9,7 @@ Tijdens mijn stage combineer ik **Webflow met custom code** om flexibele en scha
 
 ## 🎯 Doelen en werkzaamheden
 - **Projectboard & Wiki**: Ik houd een **projectboard** en **wiki** bij waarin ik documenteer wat ik doe, aantekeningen maak en handige inzichten opsla.  
-- **Redesign project**: Samen met **Nino** werk ik aan een **redesign van een van de dochterbedrijven** van Cosmetique Totale.  
+- **Redesign project**: Samen met **Nino** werk ik aan een **redesign van een van de dochterbedrijven** van Cosmetique Totale.
 - **Onderzoek & Implementatie**: Ik zoek uit hoe ik Webflow het beste kan combineren met eigen code om de gewenste functionaliteit te realiseren.  
 - **Responsive Design & Performance**: Ik zorg ervoor dat de ontwerpen **responsive, toegankelijk en performant** zijn volgens de RAPPE-principes.  
 - **Samenwerking & Communicatie**: Ik overleg regelmatig met collega's en stakeholders om mijn werk af te stemmen op de behoeften van het bedrijf.  
@@ -28,4 +28,6 @@ Tijdens mijn stage combineer ik **Webflow met custom code** om flexibele en scha
 - Leren hoe ik mijn werk goed documenteer en overdraagbaar maak voor anderen.  
 
 Deze README helpt mij om mijn focus te bewaren en geeft anderen inzicht in mijn stagewerkzaamheden. 🚀  
+
+
 
