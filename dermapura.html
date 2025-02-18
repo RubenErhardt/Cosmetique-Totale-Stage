@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <img src="https://derma-pura.de/wp-content/uploads/2024/12/Dermapura-by-CT-1-2.svg" alt="">
+        <img src="https://derma-pura.de/wp-content/uploads/2024/12/Dermapura-by-CT-1-2.svg" alt="" class="logo">
         
     <nav>
         <ul>
@@ -28,6 +28,7 @@
     </nav>
     </header>
 
+    <main>
     <section class="hero">
         <h1>
             Dauerhafte Haarentfernung, <br> <span>schnell & sanft</span>
@@ -36,7 +37,7 @@
             Nie wieder rasieren, zupfen oder wachsen
         </h2>
 
-        <img src="dermapura-home-hero-header.webp" alt="">
+        <img src="static/dermapura-home-hero-header.webp" alt="">
     </section>
     
     <section class="haut">
@@ -58,7 +59,7 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
 
                  <!-- Afbeelding 1 -->
                  <div class="grid-image">
-                    <img src="/achievements.png" alt="Achievement Image">
+                    <img src="static/achievements.png" alt="Achievement Image">
                   </div>
               
                 <!-- Vier kleinere kolommen -->
@@ -75,22 +76,86 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
               
                 <!-- Afbeelding 2 -->
                 <div class="grid-image">
-                  <img src="/achievements.png" alt="Achievement Image">
+                  <img src="static/achievements.png" alt="Achievement Image">
                 </div>
               </div>
               
         </div>
     </section>
 
+    <section class="instituten">
+      <div class="instituten-text">
+      <h2>DERMAPURA<span> instituten</span></h2>
+      <p>Unsere vier Institute bieten Ihnen ein schönes Ambiente & modernste Technologien
+        für Ihre Laser-Haarentfernung, Haarentfernung mit IPL und Fettreduktion durch Kryolipolyse.</p>
+      </div>
+
+      <div class="cards">
+      <article class="location-card">
+        <img src="static/dermapura-institute-image1.webp" alt="Leipzig Mitte">
+        <div class="location-card-text">
+        <div class="rating">
+          <span class="star">&#9733;</span> 4.8 <span>(76 Bewertungen)</span>
+        </div>
+        <h3>Leipzig Mitte</h3>
+        <p>Erleben Sie modernste Haarentfernungstechnologie im Herzen von Leipzig.</p>
+        <button class="cta-button">Mehr erfahren</button>
+      </div>
+    </article>
+
+    <article class="location-card">
+      <img src="static/dermapura-institute-image2.webp" alt="Leipzig Oste">
+      <div class="location-card-text">
+      <div class="rating">
+        <span class="star">&#9733;</span> 4.6 <span>(84 Bewertungen)</span>
+      </div>
+      <h3>Leipzig Oste</h3>
+      <p>Erleben Sie modernste Haarentfernungstechnologie im Herzen von Leipzig.</p>
+      <button class="cta-button">Mehr erfahren</button>
+    </div>
+  </article>
+
+  <article class="location-card">
+    <img src="static/dermapura-institute-image3.webp" alt="Erfurt">
+    <div class="location-card-text">
+    <div class="rating">
+      <span class="star">&#9733;</span> 4.3 <span>(60 Bewertungen)</span>
+    </div>
+    <h3>Erfurt</h3>
+    <p>Erleben Sie modernste Haarentfernungstechnologie im Herzen von Leipzig.</p>
+    <button class="cta-button">Mehr erfahren</button>
+  </div>
+</article>
+
+<article class="location-card">
+  <img src="static/dermapura-institute-image4.webp" alt="Leipzig Halle">
+  <div class="location-card-text">
+  <div class="rating">
+    <span class="star">&#9733;</span> 4.9 <span>(15 Bewertungen)</span>
+  </div>
+  <h3>Halle</h3>
+  <p>Erleben Sie modernste Haarentfernungstechnologie im Herzen von Leipzig.</p>
+  <button class="cta-button">Mehr erfahren</button>
+</div>
+</article>
+      </div>	
+    
+    </section>
+  </main>
+
     
 </body>
 
 <style>
 
-    body{
+body{
     margin: 0;
     padding: 0;
-    
+    overflow-x: hidden;
+    }
+
+    .logo{
+        max-width: 200px;
     }
 
 @font-face {
@@ -98,87 +163,18 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
     src: url('fonts/TheSeasons-Regular.otf') format('opentype'); 
 }
 
-    header {
+header {
     position: sticky;
     display: flex;
     justify-content: space-between;
     top: 0;
+
     background-color: white;
-    padding: 15px 20px;
+    padding: 15px 50px;
     z-index: 1000; 
 }
 
-.achievements-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    gap: 20px;
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-  }
-
-  
-
-  .large {
-    grid-column: span 1;
-    grid-row: span 2;
-    background: #ECE8E4;
-    text-align: center;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .small {
-    background: #ECE8E4;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .grid-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  .achievement {
-    text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-  .achievement h2 {
-    font-size: 32px;
-    margin: 0;
-    color: black;
-  }
-
-  .achievement span {
-    font-size: 18px;
-    color: #666;
-  }
-
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    .achievements-grid {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto;
-    }
-
-    .large {
-      grid-column: span 2;
-      grid-row: span 1;
-    }
-  }
-
-
-    nav ul{
+nav ul{
         display: flex;
         gap: 20px;
         list-style: none;
@@ -280,7 +276,8 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
     }
 
     .haut h2{
-        font-size: 2em;
+      font-size: 2.25rem;
+        margin: 0 auto;
         color: #356274;
         font-weight: normal;
         font-family: 'The Seasons', sans-serif;
@@ -288,9 +285,9 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
 
     .haut p{
         font-family: DM Sans;
-        color: #356274;
+        color: black;
         font-weight: normal;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .haut{
@@ -307,8 +304,179 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
     }
 
     .achievements{
-        margin-top: 10em;
+        margin-top: 8em;
     }
+
+
+    .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  
+
+  .large {
+    grid-column: span 1;
+    grid-row: span 2;
+    background: #ECE8E4;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .small {
+    background: #ECE8E4;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .grid-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .achievement {
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  .achievement h2 {
+    font-size: 32px;
+    margin: 0;
+    color: black;
+  }
+
+  .achievement span {
+    font-size: 18px;
+    color: #666;
+  }
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .achievements-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+    }
+
+    .large {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+  }
+
+  .instituten{
+   background-color:#ECE8E4; ;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   padding: 50px;
+  }
+
+  .instituten-text {
+    max-width: 40%;
+    align-self: flex-start; /* Zorgt ervoor dat de tekst links uitlijnt */
+    margin-left: 0; /* Geen extra margin naar rechts */
+    text-align: left; /* Zorgt ervoor dat tekst niet gecentreerd wordt */
+}
+
+
+  .cards{
+    display: flex;
+    justify-content: flex-start; /* Start zo ver mogelijk links */
+    gap: 40px; /* Voegt ruimte tussen de kaarten toe */
+  }
+
+
+  .instituten h2{
+        font-size: 2.25rem;
+        color: #356274;
+        font-weight: normal;
+        font-family: 'The Seasons', sans-serif;
+    }
+
+    .instituten p{
+        font-family: DM Sans;
+        color: black;
+        font-weight: normal;
+        font-size: 16px;
+        margin-top: -10px;
+    }
+
+  .location-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location-card-text{
+  padding: 20px;
+}
+
+.location-card h3{
+    font-size: 24px;
+    color: #356274;
+    font-family: 'The Seasons', sans-serif;
+}
+
+
+.location-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2px;
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+}
+
+.rating {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px dotted rgba(191, 150, 88, 0.5); /* Stippellijn en lichtere kleur */
+    padding-bottom: 5px; /* Optioneel: Extra ruimte tussen tekst en border */
+}
+
+.star{
+    color: #BF9658;
+
+}
+
+.location-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.cta-button {
+    background: #356274;
+    color: white;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #2a4d5c;
+}
 
 </style>
 
@@ -374,7 +542,7 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
     stagger: 0.3, 
     scrollTrigger: {
       trigger: ".achievements-grid",
-      start: "top 80%",
+      start: "top 50%",
       toggleActions: "play none none none",
       once: true,
       onEnter: () => {
@@ -384,6 +552,27 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
       }
     }
   });
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray(".location-card").forEach((card, index) => {
+    gsap.from(card, {
+        opacity: 0,
+        xPercent: 150,
+        rotate: 5,
+        duration: 1.4,
+        ease: "power4.out",
+        delay: index * 0.15,
+        scrollTrigger: {
+            trigger: card,
+            start: "top 60%",
+            toggleActions: "play none none none",
+            once: true, // ✅ Voorkomt dat het blijft triggeren
+        }
+    });
+});
+
+
 
 </script>
 
