@@ -1,235 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dermapura Landing Test</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-</head>
-<body>
-    <header>
-        <img src="https://derma-pura.de/wp-content/uploads/2024/12/Dermapura-by-CT-1-2.svg" alt="" class="logo">
-        
-    <nav>
-        <ul>
-            <li><a href="#">Standorte </a>
-            </li>
-            <li><a href="#">Dauerhafte Haarentfernung</a>
-            </li>
-            <li><a href="#">Kryolipolyse</a></li>
-            <li><a href="#">Faltenbehandlung </a>
-            </li>
-            <li><a href="#">Über uns </a>
-            </li>
-            <li><a href="#" class="contact-btn">Kontakt</a></li>
-        </ul>
-    </nav>
-    </header>
-
-    <main>
-      <section class="hero">
-            <div class="hero-content">
-                <h1>Dauerhafte Haarentfernung, <br> <span>schnell & sanft</span></h1>
-                <h2>Nie wieder rasieren, zupfen oder wachsen</h2>
-                <div class="hero-buttons">
-                    <button>test</button>
-                    <button>test</button>
-                </div>
-            </div>
-            <img src="static/dermapura-home-hero-header.webp" alt="Hero Image">
-    </section>
-
-    <div class="logos">
-      <div class="logo_items">
-      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-      
-      </div>
-
-      <div class="logo_items">
-        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-        <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-      <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-        
-        </div>
-      </div>
-    </div>
-    
-
-    
-    
-    
-    <section class="haut">
-        <div class="text">
-        <h2>Perfekte Haut für Ihr <span>Wohlbefinden</span></h2>
-            <p>Jede Haut und jedes Haar sind einzigartig – wir bieten maßgeschneiderte Lösungen für die besten Ergebnisse!
-Erfüllen Sie sich den Traum von seidig glatter Haut mit DERMAPURA, Ihrem Experten für dauerhafte Haarentfernung mit Laser und IPL sowie Kryolipolyse. An unseren Standorten in Leipzig Mitte, Leipzig Ost, Halle und Erfurt begleiten wir Sie auf dem Weg zu einem neuen Hautgefühl.
-Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL sorgen wir für optimale und langfristige Ergebnisse. Mit Erfahrung, individueller Beratung und kontinuierlicher Weiterbildung garantieren wir höchste Qualität – für Ihre Schönheit und Ihr Selbstbewusstsein.
-            </p>
-        </div>
-        <div class="achievements">
-            <div class="achievements-grid">
-                <!-- Grote kolom -->
-
-                <div class="achievement large">
-                    <h2 id="behandlungen-text">0</h2>
-                    <span>Behandlungen durchgeführt</span>
-                </div>
-
-                 <!-- Afbeelding 1 -->
-                 <div class="grid-image">
-                    <img src="static/achievements.png" alt="Achievement Image">
-                  </div>
-              
-                <!-- Vier kleinere kolommen -->
-                <div class="achievement small">
-                  <h2 id="kunden-text">0</h2>
-                  <span>kunden</span>
-                </div>
-
-                <div class="achievement small">
-                    <h2 id="jahre-text">0</h2>
-                    <span>jahre</span>
-                  </div>
-              
-              
-                <!-- Afbeelding 2 -->
-                <div class="grid-image">
-                  <img src="static/achievements.png" alt="Achievement Image">
-                </div>
-              </div>
-              
-        </div>
-    </section>
-
-    <section class="instituten">
-      <div class="instituten-text">
-      <h2>DERMAPURA<span> instituten</span></h2>
-      <p>Unsere vier Institute bieten Ihnen ein schönes Ambiente & modernste Technologien
-        für Ihre Laser-Haarentfernung, Haarentfernung mit IPL und Fettreduktion durch Kryolipolyse.</p>
-      </div>
-
-      <div class="cards">
-      <article class="location-card">
-        <img src="static/dermapura-institute-image1.webp" alt="Leipzig Mitte">
-        <div class="location-card-text">
-        <div class="rating">
-          <span class="star">&#9733;</span> 4.8 <span>(76 Bewertungen)</span>
-        </div>
-        <h3>Leipzig Mitte</h3>
-        <p>Erleben Sie modernste Haarentfernungstechnologie im Herzen von Leipzig.</p>
-        <button class="cta-button">Mehr erfahren</button>
-      </div>
-    </article>
-
-    <article class="location-card">
-      <img src="static/dermapura-institute-image2.webp" alt="Leipzig Oste">
-      <div class="location-card-text">
-      <div class="rating">
-        <span class="star">&#9733;</span> 4.6 <span>(84 Bewertungen)</span>
-      </div>
-      <h3>Leipzig Oste</h3>
-      <p>Erleben Sie modernste Haarentfernungstechnologie im Herzen von Leipzig.</p>
-      <button class="cta-button">Mehr erfahren</button>
-    </div>
-  </article>
-
-  <article class="location-card">
-    <img src="static/dermapura-institute-image3.webp" alt="Erfurt">
-    <div class="location-card-text">
-    <div class="rating">
-      <span class="star">&#9733;</span> 4.3 <span>(60 Bewertungen)</span>
-    </div>
-    <h3>Erfurt</h3>
-    <p>Erleben Sie modernste Haarentfernungstechnologie im Herzen von Leipzig.</p>
-    <button class="cta-button">Mehr erfahren</button>
-  </div>
-</article>
-
-<article class="location-card">
-  <img src="static/dermapura-institute-image4.webp" alt="Leipzig Halle">
-  <div class="location-card-text">
-  <div class="rating">
-    <span class="star">&#9733;</span> 4.9 <span>(15 Bewertungen)</span>
-  </div>
-  <h3>Halle</h3>
-  <p>Erleben Sie modernste Haarentfernungstechnologie im Herzen von Leipzig.</p>
-  <button class="cta-button">Mehr erfahren</button>
-</div>
-</article>
-      </div>	
-    
-    </section>
-  </main>
-
-    
-</body>
-</html>
-
-<style>
-
-body{
+    <title>Dermapura</title>
+    <style>
+/* Standaard reset */
+* {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    }
-
-    .logo{
-        max-width: 200px;
-    }
-
-    /* Hero-section */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 10%;
-    background: linear-gradient(to right, #ECE8E4, #FFFFFF); 
-    min-height: 70vh; /* Zorgt voor een mooie hoogte */
+    box-sizing: border-box;
 }
 
-/* Content blok (tekst) */
-.hero-content {
-    max-width: 50%;
+body {
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header + Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Volledige viewport hoogte */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), 
+                url('static/dermapura-home-hero-header.webp') no-repeat center center/cover;
 }
 
-/* Titel en ondertitel */
+/* Header styling */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    z-index: 10;
+}
+
+/* Logo */
+.logo {
+    max-width: 40%;
+}
+
+/* Navigatie */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #BF9658; /* Gouden accentkleur */
+}
+
+/* Hero Content */
+.hero-content {
+    max-width: 60%;
+}
+
+
 .hero h1 {
-    font-size: 3rem;
-    color: #356274;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: 'The Seasons', sans-serif;
+    font-size: 14vw;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap; /* Voorkomt dat de tekst afbreekt */
+    overflow: hidden;
+}
+
+
+.hero h2 {
+    font-size: 2rem;
     font-family: 'The Seasons', sans-serif;
     margin-bottom: 10px;
-    font-weight: normal;
 }
 
-.hero h1 span {
+.hero h2 span {
     border-bottom: 3px solid #BF9658;
 }
 
-.hero h2 {
-    font-size: 1.5rem;
-    color: #356274;
-    font-family: 'DM Sans', sans-serif;
+.hero h3 {
+    font-size: 1rem;
     font-weight: normal;
     margin-bottom: 20px;
 }
 
-/* Knoppen styling */
+/* Knoppen */
 .hero-buttons {
     display: flex;
     gap: 15px;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -238,7 +119,7 @@ body{
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    padding: 12px 20px;
+    padding: 10px 18px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -249,451 +130,51 @@ body{
     background: #A07E4D;
 }
 
-/* Afbeelding */
-.hero img {
-    width: 40%;
-    height: auto;
-    max-width: 500px;
-    border-radius: 20px;
-}
-
-/* Mobiel: tekst en afbeelding onder elkaar */
+/* Responsief design */
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
+    header {
+        padding: 20px 40px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.4rem;
     }
 
     .hero-content {
         max-width: 90%;
-        text-align: center;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .hero img {
-        width: 80%;
-        margin-top: 20px;
     }
 }
 
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://derma-pura.de/wp-content/uploads/2024/12/Dermapura-by-CT-1-2.svg" alt="" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#">Standorte</a></li>
+                <li><a href="#">Dauerhafte Haarentfernung</a></li>
+                <li><a href="#">Kryolipolyse</a></li>
+                <li><a href="#">Faltenbehandlung</a></li>
+                <li><a href="#">Über uns</a></li>
+                <li><a href="#" class="contact-btn">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Dauerhafte Haarentfernung, <br> <span>schnell & sanft</span></h2>
+                <h3>Nie wieder rasieren, zupfen oder wachsen</h3>
+            </div>
+            <h1>DERMA PURA</h1>
+        </section>
 
-@keyframes slides {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.logos {
-  overflow: hidden;
-  padding: 30px 0px;
-  white-space: nowrap;
-  position: relative;
-}
-
-.logos:before, .logos:after {
-  position: absolute;
-  top: 0;
-  content: '';
-  width: 250px;
-  height: 100%;
-  z-index: 2;
-}
-
-.logos:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255));
-}
-
-.logos:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255,255,255,0), rgb(255, 255, 255));
-}
-
-.logo_items {
-  display: inline-block;
-  animation: 30s slides infinite linear;
-}
-
-.logos:hover .logo_items {
-  animation-play-state: paused;
-}
-
-.logo_items img{
-  height: 100px;
-}
-
-
-
-@font-face {
-    font-family: 'The Seasons';
-    src: url('fonts/TheSeasons-Regular.otf') format('opentype'); 
-}
-
-header {
-    position: sticky;
-    display: flex;
-    justify-content: space-between;
-    top: 0;
-
-    background-color: white;
-    padding: 15px 100px;
-    z-index: 1000; 
-}
-
-nav ul{
-        display: flex;
-        gap: 20px;
-        list-style: none;
-    }
-
-            /* Stijl de navbar */
-            nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            padding: 15px 20px;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Stijl de lijst */
-        ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            margin: 0;
-            padding: 0;
-        }
-
-        li {
-            position: relative;
-        }
-
-        a {
-            text-decoration: none;
-            color: #356274;
-            font-size: 16px;
-            font-weight: 500;
-            padding: 10px 0;
-        }
-
-        a:hover {
-            border-bottom: 2px solid #356274;
-        }
-
-        /* Stijl de "Kontakt" knop */
-        .contact-btn {
-            background-color: #356274;
-            color: white;
-            padding: 10px 20px;
-            font-weight: bold;
-        }
-
-        .contact-btn:hover {
-            background-color: #2a4d5c;
-        }
-
-    img{
-        max-width: 100%;
-    }
-
-
-    .haut h2{
-      font-size: 2.25rem;
-        margin: 0 auto;
-        color: #356274;
-        font-weight: normal;
-        font-family: 'The Seasons', sans-serif;
-    }
-
-    .haut p{
-        font-family: DM Sans;
-        color: black;
-        font-weight: normal;
-        font-size: 16px;
-    }
-
-    .haut{
-        display: flex;
-        justify-content: space-between;
-        padding: 100px;
-    }
-
-    .text{
-        max-width: 40%;
-        margin-top: 2em;
-    }
-
-
-
-    .achievements-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    gap: 20px;
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-  }
-
-  
-
-  .large {
-    grid-column: span 1;
-    grid-row: span 2;
-    background: #ECE8E4;
-    text-align: center;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .small {
-    background: #ECE8E4;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .grid-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  .achievement {
-    text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-  .achievement h2 {
-    font-size: 32px;
-    margin: 0;
-    color: black;
-  }
-
-  .achievement span {
-    font-size: 18px;
-    color: #666;
-  }
-
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    .achievements-grid {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto;
-    }
-
-    .large {
-      grid-column: span 2;
-      grid-row: span 1;
-    }
-  }
-
-  .instituten{
-   background-color:#ECE8E4; ;
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   padding: 100px;
-  }
-
-  .instituten-text {
-    max-width: 40%;
-    align-self: flex-start; /* Zorgt ervoor dat de tekst links uitlijnt */
-    margin-left: 0; /* Geen extra margin naar rechts */
-    text-align: left; /* Zorgt ervoor dat tekst niet gecentreerd wordt */
-}
-
-
-  .cards{
-    display: flex;
-    justify-content: flex-start; /* Start zo ver mogelijk links */
-    gap: 40px; /* Voegt ruimte tussen de kaarten toe */
-  }
-
-
-  .instituten h2{
-        font-size: 2.25rem;
-        color: #356274;
-        font-weight: normal;
-        font-family: 'The Seasons', sans-serif;
-    }
-
-    .instituten p{
-        font-family: DM Sans;
-        color: black;
-        font-weight: normal;
-        font-size: 16px;
-        margin-top: -10px;
-    }
-
-  .location-card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.location-card-text{
-  padding: 20px;
-}
-
-.location-card h3{
-    font-size: 24px;
-    color: #356274;
-    font-family: 'The Seasons', sans-serif;
-}
-
-
-.location-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 2px;
-    transition: transform 0.4s ease-in-out;
-    will-change: transform;
-}
-
-.rating {
-    font-size: 16px;
-    font-weight: bold;
-    border-bottom: 2px dotted rgba(191, 150, 88, 0.5); /* Stippellijn en lichtere kleur */
-    padding-bottom: 20px;
-    font-family: 'DM Sans', sans-serif;
-}
-
-.star{
-    color: #BF9658;
-
-}
-
-.location-card p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 15px;
-    font-family: 'DM Sans', sans-serif;
-}
-
-.cta-button {
-    background: #356274;
-    color: white;
-    padding: 12px 18px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-    background: #2a4d5c;
-}
-
-</style>
-
-<script>
-    gsap.from(".hero h1", { 
-      opacity: 0, 
-      y: -50, 
-      duration: 1.2, 
-      ease: "power3.out" 
-    });
-  
-    gsap.from(".hero h2", { 
-      opacity: 0, 
-      y: 30, 
-      duration: 1.5, 
-      delay: 0.3, 
-      ease: "power3.out" 
-    });
-  
-    gsap.from(".hero img", { 
-      opacity: 0, 
-      scale: 0.90, 
-      duration: 1.5, 
-      delay: 0.6, 
-      ease: "power3.out" 
-    });
-  
-    gsap.from(".hero", {
-      scrollTrigger: {
-        trigger: ".hero",
-        start: "top 80%",
-        toggleActions: "play none none reverse"
-      },
-      opacity: 0,
-      y: 50,
-      duration: 1.2,
-      ease: "power3.out"
-    });
-  </script>
- 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-  function countUp(target, endValue, duration = 3) {
-    let obj = { value: 0 };
-    gsap.to(obj, {
-      value: endValue,
-      duration: duration,
-      ease: "power2.out",
-      onUpdate: function () {
-        document.getElementById(target).textContent = Math.floor(obj.value);
-      }
-    });
-  }
-
-  gsap.from(".achievement", {
-    opacity: 0,
-    y: 50,
-    duration: 1.5,
-    ease: "power3.out",
-    stagger: 0.3, 
-    scrollTrigger: {
-      trigger: ".achievements-grid",
-      start: "top 50%",
-      toggleActions: "play none none none",
-      once: true,
-      onEnter: () => {
-        countUp("behandlungen-text", 26995 );
-        countUp("kunden-text", 3824);
-        countUp("jahre-text", 11);
-      }
-    }
-  });
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.utils.toArray(".location-card").forEach((card, index) => {
-    gsap.from(card, {
-        opacity: 0,
-        xPercent: 150,
-        rotate: 5,
-        duration: 1.4,
-        ease: "power4.out",
-        delay: index * 0.15,
-        scrollTrigger: {
-            trigger: card,
-            start: "top 60%",
-            toggleActions: "play none none none",
-            once: true, // ✅ Voorkomt dat het blijft triggeren
-        }
-    });
-});
-</script>
+    </main>
+</body>
+</html>
