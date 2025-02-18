@@ -349,7 +349,6 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
     });
   </script>
  
-<!-- GSAP en ScrollTrigger laden -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
@@ -367,13 +366,12 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
     });
   }
 
-  // Zorg dat elk .achievement in beeld komt met fade-in + omhoog beweging
   gsap.from(".achievement", {
     opacity: 0,
     y: 50,
     duration: 1.5,
     ease: "power3.out",
-    stagger: 0.3, // Elk element komt na elkaar
+    stagger: 0.3, 
     scrollTrigger: {
       trigger: ".achievements-grid",
       start: "top 80%",
