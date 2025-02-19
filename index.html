@@ -169,9 +169,23 @@ Dank modernster Technologie wie dem Primelase®-Laser und der Ellipse Sirius IPL
       </div>	
     
     </section>
-  </main>
 
-    
+</main>
+
+<section class="dafur">
+    <div class="dafur-content">
+        <h2>Dafür stehen wir</h2>
+        <p>Wir setzen auf höchste Qualität, innovative Technologie und individuelle Beratung, um für Sie die besten Ergebnisse zu erzielen.</p>
+    </div>
+    <ul class="dafur-list">
+        <li>✔ Hochmoderne Technologie</li>
+        <li>💆‍♀️ Individuelle Beratung</li>
+        <li>🌿 Nachhaltige Pflege</li>
+        <li>✨ Langfristige Ergebnisse</li>
+        <li>🏆 Experten mit Erfahrung</li>
+    </ul>
+</section>
+
 </body>
 </html>
 
@@ -249,12 +263,13 @@ body{
     background: #A07E4D;
 }
 
-/* Afbeelding */
+
 .hero img {
-    width: 40%;
-    height: auto;
-    max-width: 500px;
-    border-radius: 20px;
+    margin-left: 500px;
+    position: absolute;
+    height: 100%;
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 /* Mobiel: tekst en afbeelding onder elkaar */
@@ -403,73 +418,80 @@ nav ul{
         max-width: 100%;
     }
 
+    .haut {
+    display: flex;
+    align-items: left;
+    padding: 100px; /* Kleinere padding voor betere responsiviteit */
+    gap: 40px; /* Houd ruimte tussen tekst en achievements */
+}
 
-    .haut h2{
-      font-size: 2.25rem;
-        margin: 0 auto;
-        color: #356274;
-        font-weight: normal;
-        font-family: 'The Seasons', sans-serif;
-    }
+.haut h2 {
+    font-size: 2.25rem;
+    margin: 0 auto;
+    color: #356274;
+    font-weight: normal;
+    font-family: 'The Seasons', sans-serif;
+}
 
-    .haut p{
-        font-family: DM Sans;
-        color: black;
-        font-weight: normal;
-        font-size: 16px;
-    }
+.haut p {
+    font-family: DM Sans;
+    color: black;
+    font-weight: normal;
+    font-size: 16px;
+}
 
-    .haut{
-        display: flex;
-        justify-content: space-between;
-        padding: 100px;
-    }
+.text {
+    max-width: 50%;
+    flex: 1;
+    min-width: 300px; /* Voorkomt dat de tekst te smal wordt op mobiel */
+}
 
-    .text{
-        max-width: 40%;
-        margin-top: 2em;
-    }
-
-
-
-    .achievements-grid {
+.achievements-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    max-width: 900px;
+    max-width: 1000px;
+    width: 100%;
     margin: auto;
-    padding: 20px;
-  }
+    grid-template-areas:
+        "large small1 small2"
+        "large small3 small4";
+}
 
-  
-
-  .large {
-    grid-column: span 1;
-    grid-row: span 2;
+.large {
+    grid-area: large;
     background: #ECE8E4;
     text-align: center;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-  .small {
+.small {
     background: #ECE8E4;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .grid-image img {
+.small:nth-child(2) { grid-area: small1; }
+.small:nth-child(3) { grid-area: small2; }
+.small:nth-child(4) { grid-area: small3; }
+.small:nth-child(5) { grid-area: small4; }
+
+.grid-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-  }
+}
 
-  .achievement {
+.achievement {
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -477,29 +499,75 @@ nav ul{
     align-items: center;
     justify-content: center;
 }
-  .achievement h2 {
-    font-size: 32px;
+
+.achievement h2 {
+    font-size: 28px;
     margin: 0;
     color: black;
-  }
+}
 
-  .achievement span {
-    font-size: 18px;
+.achievement span {
+    font-size: 16px;
     color: #666;
-  }
+}
 
-  /* Responsive Styling */
-  @media (max-width: 768px) {
+/* RESPONSIVE FIXES */
+@media (max-width: 1024px) {
     .achievements-grid {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "large large"
+            "small1 small2"
+            "small3 small4";
+    }
+}
+
+@media (max-width: 900px) {
+    .haut {
+        flex-direction: column;
+        padding: 40px; /* Extra fix voor kleine schermen */
+        text-align: center;
+    }
+
+    .grid-image img {
+        display: none;
+    }
+
+    .text {
+        max-width: 80%; /* Laat de tekst breder worden */
+    }
+
+    .achievements-grid {
+        grid-template-areas:
+            "large"
+            "small1"
+            "small2"
+            "small3"
+            "small4";
+    }
+}
+
+@media (max-width: 768px) {
+    .achievements-grid {
+        grid-template-columns: 1fr;
     }
 
     .large {
-      grid-column: span 2;
-      grid-row: span 1;
+        padding: 30px;
     }
-  }
+
+    .small {
+        padding: 15px;
+    }
+
+    .achievement h2 {
+        font-size: 24px;
+    }
+
+    .achievement span {
+        font-size: 14px;
+    }
+}
+
 
   .instituten{
    background-color:#ECE8E4; ;
@@ -603,8 +671,57 @@ nav ul{
     background: #2a4d5c;
 }
 
-</style>
+.dafur {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 100px;
+    border-radius: 15px;
+}
 
+.dafur-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.dafur h2 {
+    font-size: 2.5rem;
+    font-family: 'The Seasons', sans-serif;
+    color: #356274;
+    margin-bottom: 10px;
+}
+
+.dafur p {
+    font-size: 1.2rem;
+    font-family: 'DM Sans', sans-serif;
+    color: #333;
+}
+
+.dafur-list {
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.dafur-list li {
+    font-size: 1.3rem;
+    font-family: 'DM Sans', sans-serif;
+    color: #356274;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dafur-list li::before {
+    content: "✔";
+    font-size: 1.5rem;
+    color: #BF9658;
+}
+
+
+</style>
+<!-- 
 <script>
     gsap.from(".hero h1", { 
       opacity: 0, 
@@ -696,4 +813,4 @@ nav ul{
         }
     });
 });
-</script>
+</script> -->
