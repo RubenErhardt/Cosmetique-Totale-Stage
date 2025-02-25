@@ -177,7 +177,7 @@ h1{
       </style>
 
      
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script>
   class Pixel {
     constructor(canvas, context, x, y, color, speed, delay) {
@@ -419,79 +419,56 @@ h1{
   PixelCanvas.register();
 
   document.addEventListener("DOMContentLoaded", () => {
+    const h1 = document.querySelector("h1");
+    const cards = document.querySelectorAll(".card");
+
+    gsap.from(h1, {
+        opacity: 0,
+        x: -500,
+        scale: 1.5,
+        skewX: 30,
+        duration: 1.5,
+        ease: "power4.out",
+        onComplete: () => {
+            gsap.timeline()
+                .to(h1, { x: 5, skewX: 10, duration: 0.05, yoyo: true, repeat: 3 })
+                .to(h1, { x: 0, skewX: 0, duration: 0.1 });
+
+            gsap.to(h1, { scale: 1.05, duration: 0.3, yoyo: true, repeat: 1, ease: "power1.inOut" });
+        }
+    });
 
     gsap.from(".card", {
         opacity: 0,
-        x: (index) => index % 2 === 0 ? -300 : 300, 
-        y: -200, 
-        scale: 0.2, 
-        rotate: (index) => index % 2 === 0 ? -15 : 15, 
+        x: (index) => index % 2 === 0 ? -300 : 300,
+        y: -200,
+        scale: 0.2,
+        rotate: (index) => index % 2 === 0 ? -15 : 15,
         stagger: 0.3,
-        duration: 2.5, 
-        ease: "power4.out" 
+        duration: 2.5,
+        ease: "power4.out"
     });
 
-    document.querySelectorAll(".card").forEach((card) => {
+    cards.forEach((card) => {
         const icon = card.querySelector("svg");
 
         card.addEventListener("mouseenter", () => {
+            let activeColor = getComputedStyle(card).getPropertyValue("--active-color") || "#fff";
+
             gsap.to(card, { scale: 1.1, rotate: 5, duration: 0.5, ease: "power3.out", boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)" });
-            gsap.to(icon, { scale: 1.2, color: "var(--active-color, var(--fg))", duration: 0.3, ease: "power2.out" });
+            gsap.to(icon, { scale: 1.2, color: activeColor, duration: 0.3, ease: "power2.out" });
+
+            gsap.to(h1, { color: activeColor, textShadow: `0px 0px 15px ${activeColor}`, duration: 0.3, ease: "power2.out" });
         });
 
         card.addEventListener("mouseleave", () => {
             gsap.to(card, { scale: 1, rotate: 0, duration: 0.5, ease: "power3.inOut", boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)" });
             gsap.to(icon, { scale: 1, color: "var(--surface-3)", duration: 0.3, ease: "power2.in" });
-        });
-    });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-    const h1 = document.querySelector("h1");
-
-    // EPISCHE H1-ANIMATIE BIJ PAGINALADING 🚀
-    gsap.from(h1, {
-        opacity: 0,
-        x: -500, // Komt vanaf links
-        scale: 1.5, // Start groter voor extra impact
-        skewX: 30, // Scheef voor dynamisch effect
-        duration: 1.5,
-        ease: "power4.out",
-        onComplete: () => {
-            // Glitch-effect na binnenkomst
-            gsap.timeline()
-                .to(h1, { x: 5, skewX: 10, duration: 0.05, yoyo: true, repeat: 3 })
-                .to(h1, { x: 0, skewX: 0, duration: 0.1 });
-
-            // Pulse effect na glitch
-            gsap.to(h1, { scale: 1.05, duration: 0.3, yoyo: true, repeat: 1, ease: "power1.inOut" });
-        }
-    });
-
-    // INTERACTIE MET KAARTEN: MATCH H1 KLEUR MET HOVER-KAART
-    document.querySelectorAll(".card").forEach((card) => {
-        card.addEventListener("mouseenter", () => {
-            let activeColor = getComputedStyle(card).getPropertyValue("--active-color") || "#fff";
-            
-            gsap.to(h1, { 
-                color: activeColor, 
-                textShadow: `0px 0px 15px ${activeColor}`, 
-                duration: 0.3, 
-                ease: "power2.out" 
-            });
-        });
-
-        card.addEventListener("mouseleave", () => {
-            gsap.to(h1, { 
-                color: "#fff", 
-                textShadow: "none", 
-                duration: 0.3, 
-                ease: "power2.in" 
-            });
+            gsap.to(h1, { color: "#fff", textShadow: "none", duration: 0.3, ease: "power2.in" });
         });
     });
 
-    // HOVER EFFECT: LICHTGEVEND TECH EFFECT OP H1
     h1.addEventListener("mouseenter", () => {
         gsap.to(h1, { textShadow: "0px 0px 20px rgba(255,255,255,0.8)", duration: 0.3 });
     });
@@ -500,6 +477,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to(h1, { textShadow: "none", duration: 0.3 });
     });
 });
+
 
 
 
